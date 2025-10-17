@@ -139,3 +139,120 @@ p {
     width: 100%;
     gap: 2px;
 }
+/* === 1. Celulares até 480px === */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .logo img {
+        max-height: 100px;
+        margin-bottom: 10px;
+    }
+
+    .menu {
+        flex-direction: column;
+        margin-left: 0;
+        gap: 8px;
+    }
+
+    .menu a {
+        font-size: 17px;
+        border: none;
+        padding: 8px 0;
+    }
+
+    h1 {
+        font-size: 22px;
+        margin: 10px;
+    }
+
+    h2 {
+        font-size: 16px;
+        padding: 0 15px;
+    }
+
+    iframe {
+        width: 95%;
+        height: 250px;
+    }
+
+    .LogoSesiSenai img {
+        max-width: 200px;
+    }
+
+    .faixa-final {
+        font-size: 14px;
+    }
+}
+
+/* === 2. Tablets entre 481px e 768px === */
+@media (min-width: 481px) and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .logo img {
+        max-height: 120px;
+        margin-bottom: 10px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-left: 0;
+    }
+
+    .menu a {
+        font-size: 18px;
+        padding: 8px;
+        border: none;
+    }
+
+    iframe {
+        width: 90%;
+        height: 350px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 17px;
+        padding: 0 20px;
+    }
+}
+
+/* === 3. Notebooks pequenos (769px – 1024px) === */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .menu {
+        gap: 5px;
+        margin-left: 0;
+    }
+
+    .menu a {
+        font-size: 18px;
+    }
+
+    iframe {
+        width: 80%;
+        height: 400px;
+    }
+
+    h2 {
+        max-width: 900px;
+    }
+}
