@@ -10,16 +10,14 @@ body {
     background: linear-gradient(to right, rgb(0, 162, 255), rgb(0, 1, 173));
 }
 
-
+/* NAVBAR */
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: rgb(0, 52, 129);
     padding: 10px 30px;
-    
 }
-
 
 .logo img {
     max-height: 150px;
@@ -28,6 +26,7 @@ body {
     border-radius: 20px;
 }
 
+/* Títulos */
 h1 {
     color: white;
     font-size: 38px;
@@ -44,7 +43,6 @@ h2 {
     font-weight: bold;
 }
 
-
 h3 { 
     max-width: 1400px;
     margin: 10px auto;
@@ -54,14 +52,7 @@ h3 {
     color: white;
 }
 
-
-.logo img {
-    max-height: 400px;
-    width: auto;
-    border-radius: 30px;
-}
-
-
+/* MENU */
 .menu {
     display: flex;
     gap: 0;
@@ -77,22 +68,17 @@ h3 {
     padding: 0 10px;
 }
 
-
-
-
+/* RODAPÉ */
 p {
     font-size: 20px;
     text-align: center;
-    justify-content: center;
 }
 
 .LogoSesiSenai img {
     max-width: 300px;
     width: 110%;
     height: auto;
-    display: block;
 }
-
 
 .faixa-final {
     background-color: white;
@@ -105,204 +91,143 @@ p {
     font-weight: bold;
     font-size: 16px;
     width: 100%;
-    gap: 2px;
 }
-.calculadoras {
-    padding: 48px 20px;
-    flex-direction: column;
+
+/* =================================================== */
+/*     SEÇÃO DAS CALCULADORAS COM FUNDO ANIMADO        */
+/* =================================================== */
+
+/* Corrigido: agora combina com o HTML */
+.calculadora-area {
+    position: relative;
+    padding: 100px 20px;
+    overflow: hidden;
+    margin-top: 60px;
+}
+
+.calculadoras-container {
+    position: relative;
+    z-index: 20;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 60px;
-    background: gray;
+    gap: 70px;
 }
 
-
-.calc {
-    width: 340px;
-    padding: 25px 20px;
-    border-radius: 30px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+/* Caixas */
+.card {
+    background: rgba(0, 0, 0, 0.5);
+    border: 3px solid white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 370px;
     color: white;
-    font-family: sans-serif;
-   
-}
-
-
-
-.calc.ohm {
-
-    border: 3px solid white;
-}
-
-.calc.potencia {
-    border: 3px solid white;
-}
-
-.calc.sensor {
-    border: 3px solid white;
-}
-
-
-.card h2 {
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
 }
 
 .card input {
     width: 80%;
     padding: 10px;
-    text-align: center;
-    font-size: 18px;
     border-radius: 10px;
-    margin: 8px 0;
- 
-   
+    border: none;
+    font-size: 18px;
+    margin-top: 10px;
 }
-
-
-
 
 .card button {
     background-color: #fff;
     color: #000;
-    border: none;
     font-weight: bold;
     padding: 10px 20px;
     border-radius: 15px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 10px;
+    transition: 0.3s;
+    margin-top: 15px;
+    border: none;
 }
 
 .card button:hover {
-    background-color: #000;
-    color: #fff;
-   
+    background-color: black;
+    color: white;
 }
 
-
-.card p {
-    font-size: 17px;
-    margin-top: 15px;
-    font-weight: 500;
-    color: #fff;
+/* FUNDO ANIMADO */
+.stars {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 200%;
+    transform: rotate(-35deg);
+    overflow: hidden;
+    z-index: 1;
 }
-/* === 1. Celulares até 480px === */
+
+.star {
+    --star-color: #ffffff;
+    --star-tail-length: 6em;
+    --star-tail-height: 2px;
+    --star-width: calc(var(--star-tail-length) / 6);
+    --fall-duration: 9s;
+    --tail-fade-duration: var(--fall-duration);
+
+    position: absolute;
+    top: var(--top-offset);
+    left: 0;
+    width: var(--star-tail-length);
+    height: var(--star-tail-height);
+    background: linear-gradient(45deg, currentColor, transparent);
+    color: white;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 6px currentColor);
+
+    transform: translate3d(105em, 0, 0);
+
+    animation: fall var(--fall-duration) var(--fall-delay) linear infinite,
+               tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
+}
+
+/* Aleatoriedade */
+.star:nth-child(n) {
+    --star-tail-length: calc(40em + (random() * 30em));
+    --top-offset: calc(random() * 100vh);
+    --fall-duration: calc(6s + (random() * 6s));
+    --fall-delay: calc(random() * 10s);
+}
+
+.star::before,
+.star::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: calc(var(--star-width) / -2);
+    width: var(--star-width);
+    height: 100%;
+    background: linear-gradient(45deg, transparent, currentColor, transparent);
+    border-radius: inherit;
+    animation: blink 2s linear infinite;
+}
+
+.star::before { transform: rotate(45deg); }
+.star::after { transform: rotate(-45deg); }
+
+@keyframes fall {
+    to { transform: translate3d(-30em, 0, 0); }
+}
+
+@keyframes tail-fade {
+    0%, 50% { width: var(--star-tail-length); opacity: 1; }
+    70%, 80% { width: 0; opacity: 0.4; }
+    100% { width: 0; opacity: 0; }
+}
+
+@keyframes blink {
+    50% { opacity: 0.6; }
+}
+
+/* RESPONSIVO */
 @media (max-width: 480px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 15px;
-    }
-
-    .logo img {
-        max-height: 100px;
-        margin-bottom: 10px;
-    }
-
-    .menu {
-        flex-direction: column;
-        margin-left: 0;
-        gap: 8px;
-    }
-
-    .menu a {
-        font-size: 17px;
-        border: none;
-        padding: 8px 0;
-    }
-
-    h1 {
-        font-size: 22px;
-        margin: 10px;
-    }
-
-    h2 {
-        font-size: 16px;
-        padding: 0 15px;
-    }
-
-    iframe {
-        width: 95%;
-        height: 250px;
-    }
-
-    .LogoSesiSenai img {
-        max-width: 200px;
-    }
-
-    .faixa-final {
-        font-size: 14px;
-    }
-}
-
-/* === 2. Tablets entre 481px e 768px === */
-@media (min-width: 481px) and (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 20px;
-    }
-
-    .logo img {
-        max-height: 120px;
-        margin-bottom: 10px;
-    }
-
-    .menu {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        margin-left: 0;
-    }
-
-    .menu a {
-        font-size: 18px;
-        padding: 8px;
-        border: none;
-    }
-
-    iframe {
-        width: 90%;
-        height: 350px;
-    }
-
-    h1 {
-        font-size: 25px;
-    }
-
-    h2 {
-        font-size: 17px;
-        padding: 0 20px;
-    }
-}
-
-/* === 3. Notebooks pequenos (769px – 1024px) === */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .navbar {
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    .menu {
-        gap: 5px;
-        margin-left: 0;
-    }
-
-    .menu a {
-        font-size: 18px;
-    }
-
-    iframe {
-        width: 80%;
-        height: 400px;
-    }
-
-    h2 {
-        max-width: 900px;
-    }
+    .navbar { flex-direction: column; padding: 15px; }
+    .menu { flex-direction: column; margin-left: 0; gap: 8px; }
+    .menu a { border: none; }
+    .card { width: 90%; }
 }
