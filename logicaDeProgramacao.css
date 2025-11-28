@@ -7,7 +7,7 @@
 body {
     text-align: center;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, rgb(0, 162, 255), rgb(0, 1, 173));
+    background: linear-gradient(to right, rgb(180, 23, 23), rgb(100, 34, 34),rgb(128, 56, 56));
 }
 
 
@@ -47,7 +47,7 @@ h2 {
 }
 
 h3 { 
-    max-width: 1300px;
+    max-width: 1100px;
     margin: 10px auto;
     text-align: justify;
     font-size: 18px;

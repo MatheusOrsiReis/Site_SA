@@ -7,7 +7,7 @@
 body {
     text-align: center;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, rgb(0, 162, 255), rgb(0, 1, 173));
+    background: linear-gradient(to right, rgb(143, 83, 145), rgb(0, 1, 173));
 }
 
 
@@ -322,4 +322,25 @@ p {
     object-fit: cover; 
     border-radius: 10px;
   
+}
+/* Centralização da imagem */
+.ImagemDoPortugol .linha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Tamanho + borda + animação */
+.img-animada {
+    width: 480px; /* ajuste se quiser */
+    border-radius: 12px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+    box-shadow: 0 0 10px #00eaff;
+}
+
+/* Neon ao passar o mouse */
+.img-animada:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 20px #00eaff, 0 0 40px #00eaff;
+    filter: brightness(1.12);
 }

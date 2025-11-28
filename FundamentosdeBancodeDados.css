@@ -7,7 +7,7 @@
 body {
     text-align: center;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, rgb(0, 162, 255), rgb(0, 1, 173));
+    background: linear-gradient(to right, rgb(76, 0, 255), rgb(0, 1, 173));
 }
 
 
@@ -48,7 +48,7 @@ h2 {
 
 
 h3 { 
-    max-width: 1400px;
+    max-width: 1100px;
     margin: 10px auto;
     text-align: justify;
     font-size: 18px;
@@ -237,4 +237,23 @@ p {
     h2 {
         max-width: 900px;
     }
+}
+.imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-animada {
+    width: 450px; /* coloque o tamanho que quiser */
+    border-radius: 12px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+    box-shadow: 0 0 10px #00eaff;
+}
+
+/* ANIMAÇÃO NO HOVER */
+.img-animada:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00eaff, 0 0 40px #00eaff;
+    filter: brightness(1.15);
 }

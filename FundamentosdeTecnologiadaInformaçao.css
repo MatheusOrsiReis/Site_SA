@@ -7,7 +7,7 @@
 body {
     text-align: center;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, rgb(0, 162, 255), rgb(0, 1, 173));
+    background: linear-gradient(to right, rgb(25, 68, 0), rgb(114, 156, 93));
 }
 
 
@@ -47,7 +47,7 @@ h2 {
 
 
 h3 { 
-    max-width: 1400px;
+    max-width: 1100px;
     margin: 10px auto;
     text-align: justify;
     font-size: 18px;
@@ -255,4 +255,27 @@ p {
     h2 {
         max-width: 900px;
     }
+}
+/* Centralização das imagens */
+.foto-word,
+.foto-power,
+.foto-excel {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* Ajuste de tamanho + transições */
+.img-animada {
+    width: 230px; /* pode ajustar o tamanho como quiser */
+    border-radius: 12px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+    box-shadow: 0 0 10px #00eaff;
+}
+
+/* Efeito Neon + Zoom ao passar o mouse */
+.img-animada:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 20px #00eaff, 0 0 40px #00eaff;
+    filter: brightness(1.15);
 }

@@ -7,7 +7,7 @@
 body {
     text-align: center;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, rgb(0, 162, 255), rgb(0, 1, 173));
+    background: linear-gradient(to right, rgb(4, 0, 255), rgb(0, 1, 173));
 }
 
 /* NAVBAR */
@@ -44,7 +44,7 @@ h2 {
 }
 
 h3 { 
-    max-width: 1400px;
+    max-width: 1100px;
     margin: 10px auto;
     text-align: justify;
     font-size: 18px;
@@ -151,83 +151,3 @@ p {
     color: white;
 }
 
-/* FUNDO ANIMADO */
-.stars {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 200%;
-    transform: rotate(-35deg);
-    overflow: hidden;
-    z-index: 1;
-}
-
-.star {
-    --star-color: #ffffff;
-    --star-tail-length: 6em;
-    --star-tail-height: 2px;
-    --star-width: calc(var(--star-tail-length) / 6);
-    --fall-duration: 9s;
-    --tail-fade-duration: var(--fall-duration);
-
-    position: absolute;
-    top: var(--top-offset);
-    left: 0;
-    width: var(--star-tail-length);
-    height: var(--star-tail-height);
-    background: linear-gradient(45deg, currentColor, transparent);
-    color: white;
-    border-radius: 50%;
-    filter: drop-shadow(0 0 6px currentColor);
-
-    transform: translate3d(105em, 0, 0);
-
-    animation: fall var(--fall-duration) var(--fall-delay) linear infinite,
-               tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
-}
-
-/* Aleatoriedade */
-.star:nth-child(n) {
-    --star-tail-length: calc(40em + (random() * 30em));
-    --top-offset: calc(random() * 100vh);
-    --fall-duration: calc(6s + (random() * 6s));
-    --fall-delay: calc(random() * 10s);
-}
-
-.star::before,
-.star::after {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: calc(var(--star-width) / -2);
-    width: var(--star-width);
-    height: 100%;
-    background: linear-gradient(45deg, transparent, currentColor, transparent);
-    border-radius: inherit;
-    animation: blink 2s linear infinite;
-}
-
-.star::before { transform: rotate(45deg); }
-.star::after { transform: rotate(-45deg); }
-
-@keyframes fall {
-    to { transform: translate3d(-30em, 0, 0); }
-}
-
-@keyframes tail-fade {
-    0%, 50% { width: var(--star-tail-length); opacity: 1; }
-    70%, 80% { width: 0; opacity: 0.4; }
-    100% { width: 0; opacity: 0; }
-}
-
-@keyframes blink {
-    50% { opacity: 0.6; }
-}
-
-/* RESPONSIVO */
-@media (max-width: 480px) {
-    .navbar { flex-direction: column; padding: 15px; }
-    .menu { flex-direction: column; margin-left: 0; gap: 8px; }
-    .menu a { border: none; }
-    .card { width: 90%; }
-}
