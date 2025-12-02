@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, rgb(143, 83, 145), rgb(0, 1, 173));
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(98, 31, 104);
+    padding: 10px 30px;
+    
+}
+
+.logo img {
+    max-height: 150px;
+    height: 150px;
+    width: auto;
+    border-radius: 20px;
+}
+
+
+h1 {
+    color: white;
+    font-size: 38px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+h2 {
+    color: white;
+    text-decoration: underline;
+    font-size: 26px; 
+    text-align: center; 
+    margin: 40px auto 10px auto;
+    font-weight: bold;
+}
+
+
+h3 { 
+    max-width: 1100px;
+    margin: 10px auto;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.6;
+    color: white;
+}
+
+
+.logo img {
+    max-height: 400px;
+    width: auto;
+    border-radius: 30px;
+}
+
+
+.menu {
+    display: flex;
+    gap: 0;
+    margin-left: 90px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 19px;
+    border-right: 1px solid white;
+    padding: 0 10px;
+}
+.word {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.power {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.excel {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.foto-word img {
+    max-width: 620px; 
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+.foto-power img {
+    max-width: 820px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+.foto-excel img {
+    max-width: 820px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+p {
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.LogoSesiSenai img {
+    max-width: 300px;
+    width: 110%;
+    height: auto;
+    display: block;
+}
+
+.footer {
+    background: linear-gradient(90deg, #0066ff, #00237a);
+    color: white;
+    margin-top: 50px;
+    padding: 40px 20px 20px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid white;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-logo {
+    width: 170px;
+    margin-bottom: 10px;
+}
+
+.footer-author {
+    font-size: 17px;
+    margin-top: 5px;
+}
+.footer-logo {
+    width: 170px;
+    margin-bottom: 10px;
+    background: white;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    opacity: 0.9;
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .logo img {
+        max-height: 100px;
+        margin-bottom: 10px;
+    }
+
+    .menu {
+        flex-direction: column;
+        margin-left: 0;
+        gap: 8px;
+    }
+
+    .menu a {
+        font-size: 17px;
+        border: none;
+        padding: 8px 0;
+    }
+
+    h1 {
+        font-size: 22px;
+        margin: 10px;
+    }
+
+    h2 {
+        font-size: 16px;
+        padding: 0 15px;
+    }
+
+    iframe {
+        width: 95%;
+        height: 250px;
+    }
+
+    .LogoSesiSenai img {
+        max-width: 200px;
+    }
+
+    .faixa-final {
+        font-size: 14px;
+    }
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .logo img {
+        max-height: 120px;
+        margin-bottom: 10px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-left: 0;
+    }
+
+    .menu a {
+        font-size: 18px;
+        padding: 8px;
+        border: none;
+    }
+
+    iframe {
+        width: 90%;
+        height: 350px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 17px;
+        padding: 0 20px;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .menu {
+        gap: 5px;
+        margin-left: 0;
+    }
+
+    .menu a {
+        font-size: 18px;
+    }
+
+    iframe {
+        width: 80%;
+        height: 400px;
+    }
+
+    h2 {
+        max-width: 900px;
+    }
+}
+
+
+.code-box {
+    background-color: #1e1e1e;
+    color: #dcdcdc;
+    border: 2px solid #00aaff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 30px auto;         
+    width: 90%;                 
+    max-width: 900px;          
+    font-family: "Courier New", monospace;
+    font-size: 15px;
+    overflow-x: auto;
+    box-shadow: 0 0 12px rgba(0, 170, 255, 0.3);
+}
+
+
+.language-js .token.keyword {
+    color: #569CD6;
+}
+
+.language-js .token.string {
+    color: #CE9178;
+}
+
+.language-js .token.number {
+    color: #B5CEA8;
+}
+
+.language-js .token.function {
+    color: #DCDCAA;
+}
+
+.language-js .token.comment {
+    color: #6A9955;
+}
+.code-box {
+    background-color: #1e1e1e;
+    border: 2px solid #00aaff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 0 12px rgba(0, 170, 255, 0.3);
+}
+
+.language-js .token.operator {
+    color: #D4D4D4;
+}
+
+.language-js .token.constant {
+    color: #4FC1FF;
+}
+
+.language-js .token.class-name {
+    color: #4EC9B0;
+}
+.ImagemDoPortugol img {
+    width: 1150px;     
+    height: 550px;    
+    object-fit: cover; 
+    border-radius: 10px;
+  
+}
+
+.ImagemDoPortugol .linha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.img-animada {
+    width: 480px; 
+    border-radius: 12px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+    box-shadow: 0 0 10px #00eaff;
+}
+
+.img-animada:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 20px #00eaff, 0 0 40px #00eaff;
+    filter: brightness(1.12);
+}

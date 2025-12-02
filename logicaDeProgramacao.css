@@ -1,0 +1,205 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, rgb(180, 23, 23), rgb(100, 34, 34), rgb(128, 56, 56));
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(117, 40, 9);
+    padding: 10px 30px;
+}
+
+.logo img {
+    max-height: 150px;
+    width: auto;
+    border-radius: 20px;
+}
+
+
+h1 {
+    color: white;
+    font-size: 38px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+h2 {
+    color: white;
+    text-decoration: underline;
+    font-size: 26px;
+    text-align: center;
+    margin: 40px auto 10px auto;
+    font-weight: bold;
+}
+
+h3 {
+    max-width: 1100px;
+    margin: 10px auto;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.6;
+    color: white;
+}
+
+.menu {
+    display: flex;
+    gap: 0;
+    margin-left: 90px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 19px;
+    border-right: 1px solid white;
+    padding: 0 10px;
+}
+
+
+.caixa-calculadora {
+    background-color: rgb(3, 8, 77);          
+    color: white;
+    width: 45%;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 18px;                         
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.6);      
+    border: 3px solid white;                    
+    transition: transform 0.25s ease;
+}
+
+.caixa-calculadora:hover {
+    transform: scale(1.02);
+}
+
+
+.caixa-calculadora input {
+    margin: 8px;
+    padding: 10px;
+    width: 200px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+.caixa-calculadora label {
+    display: block;
+    color: white;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+
+.caixa-calculadora button {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: none;
+    padding: 12px 22px;
+    margin-top: 12px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.caixa-calculadora button:hover {
+    background-color: rgb(0, 136, 255);
+    color: white;
+}
+
+#res5, #res6, #res7, #res8, #res9, #res10, #res11 {
+    margin-top: 15px;
+    color: yellow;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.video-explicacao {
+    margin: 60px auto;
+    text-align: center;
+    color: white;
+}
+
+#explicando {
+    width: 80%;
+    max-width: 900px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+
+.footer {
+    background: linear-gradient(90deg, #0066ff, #00237a);
+    color: white;
+    margin-top: 50px;
+    padding: 40px 20px 20px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid white;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-logo {
+    width: 170px;
+    margin-bottom: 10px;
+}
+
+.footer-author {
+    font-size: 17px;
+    margin-top: 5px;
+}
+.footer-logo {
+    width: 170px;
+    margin-bottom: 10px;
+    background: white;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    opacity: 0.9;
+}

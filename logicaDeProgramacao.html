@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./logicaDeProgramacao.css">
+    <script src="./logicaDeProgramacao.js" defer></script>
+    <title>Situação de Aprendizagem</title>
+    <link rel="shortcut icon" href="./Pasta_Imagens/logo sesisenai.png" type="image/x-icon">
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">
+            <img src="./Pasta_Imagens/logo sesisenai.png" alt="Logo SESI">
+        </div>
+
+        <div class="menu">
+            <a href="./index.html">Home</a>
+            <a href="./fundamentosEletroEletronica.html">Fundamentos de Eletroeletrônica</a>
+            <a href="./logicaComputacional.html">Lógica Computacional</a>
+            <a href="./FundamentosdeBancodeDados.html">Fundamentos de Banco de Dados</a>
+            <a href="./logicaDeProgramacao.html">Lógica de Programação</a>
+            <a href="./FundamentosdeTecnologiadaInformaçao.html">Fundamentos de Tecnologia da Informação</a>
+            <a href="./FundamentosdeTecnologiadeRedes.html">Fundamentos de Tecnologia de Redes</a>
+        </div>
+    </div>
+
+    <br><br>
+    <h1>Lógica de Programação</h1><br>
+
+    <h2>O que são Linguagens de Programação?</h2><br>
+    <h3>Linguagens de programação são conjuntos de instruções e regras usadas para criar programas que controlam o comportamento de um computador. Elas permitem que o programador se comunique com a máquina e desenvolva softwares, jogos, sites, aplicativos e muito mais. Existem muitas linguagens diferentes, cada uma com suas características e usos específicos. O C++ é uma linguagem de alto desempenho, muito utilizada para desenvolver sistemas operacionais, jogos e aplicações que precisam de velocidade. O JavaScript é uma linguagem usada principalmente no desenvolvimento de sites, responsável por deixar as páginas mais dinâmicas e interativas. O Java é amplamente usado em aplicativos Android, sistemas corporativos e servidores, sendo conhecido por sua portabilidade. O Python é uma linguagem simples e versátil, usada em automação, ciência de dados e inteligência artificial. Já o PHP é muito utilizado no desenvolvimento web, especialmente para criar sites dinâmicos e sistemas como o WordPress.</h3><br>
+
+    <h2>O que é uma linguagem de programação interpretada? e uma linguagem de programação compilada?</h2><br>
+    <h3>Uma linguagem de programação interpretada é aquela em que o código é executado linha por linha, em tempo real, por um interpretador. Isso significa que o programa roda diretamente, sem precisar ser transformado antes em código de máquina. Exemplos de linguagens interpretadas são Python, JavaScript e PHP. Já uma linguagem compilada precisa passar por um processo de compilação, onde todo o código é traduzido para linguagem de máquina antes da execução, o que torna o programa mais rápido. Exemplos de linguagens compiladas são C++, Java e Go.</h3><br>
+
+    <h2>O que é HTML E CSS</h2><br>
+    <h3>HTML (HyperText Markup Language) é a linguagem de marcação usada para estruturar o conteúdo de uma página da web, organizando textos, imagens, links e outros elementos. Já o CSS (Cascading Style Sheets) é a linguagem responsável pela parte visual, ou seja, define cores, fontes, tamanhos, espaçamentos e o layout geral do site. Enquanto o HTML cria a estrutura, o CSS dá o estilo e a aparência final à página.</h3><br>
+
+    <h2>O que é uma IDE</h2><br>
+    <h3>Uma IDE (Integrated Development Environment) é um ambiente de desenvolvimento integrado que reúne várias ferramentas úteis para programar em um só lugar. Nela, o programador pode escrever, testar e depurar códigos de forma prática e organizada. As IDEs geralmente possuem recursos como editor de código, terminal, compilador e depurador. Exemplos conhecidos são o Visual Studio Code, IntelliJ IDEA, PyCharm e Eclipse, cada um voltado para diferentes linguagens e tipos de projeto.</h3><br><br>
+    
+    <section id="calculadoras">
+        <h1>Calculadoras de Exercícios</h1>
+
+        <div class="caixa-calculadora">
+            <h2>Questão 5 - Ordenar números de 1 a 20</h2>
+            <button onclick="ordenarNumeros()">Ordenar</button>
+            <div id="res5"></div>
+        </div>
+
+        <div class="caixa-calculadora">
+            <h2>Questão 6 - Bubble Sort (10 números aleatórios)</h2>
+            <button onclick="bubbleSort()">Gerar e Ordenar</button>
+            <div id="res6"></div>
+        </div>
+
+        <div class="caixa-calculadora">
+            <h2>Questão 7 - Soma de 10 números aleatórios (1–220)</h2>
+            <button onclick="somarNumeros()">Somar</button>
+            <div id="res7"></div>
+        </div>
+
+        <div class="caixa-calculadora">
+            <h2>Questão 8 - Matriz 3x3 de números aleatórios</h2>
+            <button onclick="gerarMatriz()">Gerar Matriz</button>
+            <div id="res8"></div>
+        </div>
+
+        <div class="caixa-calculadora">
+            <h2>Questão 9 - Cálculo de IMC</h2>
+            <label>Peso (kg):</label><input id="peso"><br>
+            <label>Altura (m):</label><input id="altura"><br>
+            <button onclick="calcularIMC()">Calcular</button>
+            <div id="res9"></div>
+        </div>
+
+        <div class="caixa-calculadora">
+            <h2>Questão 10 - Conversão de Temperatura (°C / °F)</h2>
+            <label>Digite 'C' ou 'F':</label><input id="tipo"><br>
+            <label>Temperatura:</label><input id="temp"><br>
+            <button onclick="converterTemp()">Converter</button>
+            <div id="res10"></div>
+        </div>
+
+        <div class="caixa-calculadora">
+            <h2>Questão 11 - Busca Linear</h2>
+            <button onclick="buscaLinear()">Executar Busca</button>
+            <div id="res11"></div>
+        </div>
+    </section>
+
+
+    <section class="video-explicacao">
+        <h2>Explicando de Forma Visual</h2><br>
+        <video id="explicando" controls>
+            <source src="./Pasta_Imagens/video_explicaçao.mp4" type="video/mp4">
+        </video>
+     
+    </section>
+
+    <br><br>
+
+   <div class="faixa-final">
+  <footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <img src="./Pasta_Imagens/logo_sesisenai_final-removebg-preview.png" alt="SESI SENAI" class="footer-logo">
+            <p class="footer-author">Site realizado por <strong>Matheus Orsi Reis</strong></p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contato</h3>
+            <p><strong>Telefone:</strong> (48)  3263-8600</p>
+            <p><strong>E-mail:</strong> faleconosco@sesisc.org.br</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Localização</h3>
+            <p>SENAI Tijucas</p>
+            <p>Av. José Manoel Reis — Centro, Tijucas/SC</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 Todos os direitos reservados.
+    </div>
+</footer>
+
+</div>
+
+</body>
+</html>

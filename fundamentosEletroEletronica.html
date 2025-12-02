@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./eletroEletronica.css">
+    <script src="calculos_de_eletronica.js" defer></script>
+    <title>Situação de Aprendizagem</title>
+    <link rel="shortcut icon" href="./Pasta_Imagens/logo sesisenai.png" type="image/x-icon">
+</head>
+<body>
+
+
+    <div class="navbar">
+        <div class="logo">
+            <img src="./Pasta_Imagens/logo sesisenai.png" alt="Logo SESI">
+        </div>
+
+        <div class="menu">
+            <a href="./index.html">Home</a>
+            <a href="./fundamentosEletroEletronica.html">Fundamentos de Eletroeletrônica</a>
+            <a href="./logicaComputacional.html">Lógica Computacional</a>
+            <a href="./FundamentosdeBancodeDados.html">Fundamentos de Banco de Dados</a>
+            <a href="./logicaDeProgramacao.html">Lógica de Programação</a>
+            <a href="./FundamentosdeTecnologiadaInformaçao.html">Fundamentos de Tecnologia da Informação</a>
+            <a href="./FundamentosdeTecnologiadeRedes.html">Fundamentos de Tecnologia de Redes</a>
+        </div>
+    </div>
+
+    <br><br>
+    <h1>Fundamentos de Eletroeletrônica</h1>
+    <br><br><br>
+
+    <h2>Componentes eletrônicos empregados em serviços</h2><br>
+    <h3>Os componentes eletrônicos são fundamentais para o funcionamento de qualquer circuito. O resistor tem a função de limitar a passagem de corrente elétrica, protegendo os demais componentes. O diodo LED é um tipo de diodo que emite luz quando a corrente elétrica passa por ele, sendo muito usado em indicadores luminosos. O transistor funciona como uma chave eletrônica ou amplificador de sinal, controlando o fluxo de corrente entre seus terminais. Já o circuito integrado é um pequeno chip que reúne diversos componentes eletrônicos, como resistores, transistores e capacitores, em um único encapsulamento, permitindo funções complexas em pouco espaço.</h3><br>
+
+    <h2>Sensores empregados em sistemas automatizados:</h2><br>
+    <h3>Os sensores são dispositivos que detectam variações no ambiente e transformam essas informações em sinais elétricos. Em sistemas automatizados, são usados sensores de temperatura, que medem o calor e ajudam em controles de aquecimento; sensores de umidade, que verificam a quantidade de vapor de água no ar; sensores de luminosidade, que identificam a intensidade da luz; e sensores de proximidade, que medem a distância até objetos. Eles são essenciais para que máquinas e sistemas automatizados possam reagir a mudanças do ambiente de forma inteligente.</h3><br>
+
+    <h2>Arduino: o que é, para que serve, aplicações, vantagens e desvantagens:</h2><br>
+    <h3>O Arduino é uma placa eletrônica programável que funciona como um microcontrolador, usada para desenvolver projetos de automação e robótica. Ele serve para receber dados de sensores, processar informações e acionar dispositivos como LEDs, motores e relés. Suas aplicações são diversas, indo desde sistemas de irrigação automática e alarmes até robôs e automação residencial. Entre as vantagens estão o baixo custo, a facilidade de uso e a grande quantidade de exemplos e tutoriais disponíveis. As desvantagens incluem limitações de memória e processamento, o que o torna menos eficiente para projetos mais complexos.</h3><br>
+
+    <h2>Como o Arduino funciona e o que é eletrônica embarcada:</h2><br>
+    <h3>O funcionamento do Arduino se baseia na leitura de sinais vindos de sensores, no processamento desses dados por um microcontrolador e na resposta através de saídas que acionam outros dispositivos. Ele interpreta informações elétricas e executa comandos de acordo com o que foi programado. Já a eletrônica embarcada é o uso de sistemas eletrônicos e de software dentro de equipamentos como carros, drones, eletrodomésticos e máquinas industriais, permitindo que eles executem funções automáticas e inteligentes de forma integrada.</h3><br>
+
+    <h2>Arduino: qual a linguagem de programação usada:</h2><br>
+    <h3>A linguagem de programação usada no Arduino é baseada em C e C++, adaptada para ser mais simples e intuitiva. Essa linguagem é usada para escrever os códigos que controlam o comportamento da placa, definindo como ela deve reagir aos sinais de entrada e o que deve fazer nas saídas. Também é possível programar o Arduino usando Python, com o auxílio de bibliotecas específicas, mas o padrão e o mais utilizado é o C/C++.</h3><br>
+
+    <h2>O que são entradas e saídas digitais em circuitos integrados como o Arduino:</h2><br>
+    <h3>As entradas e saídas digitais no Arduino trabalham apenas com dois estados: ligado ou desligado, representados por 1 (HIGH) e 0 (LOW). Uma entrada digital é usada para ler sinais, como o de um botão que pode estar pressionado ou não. Já uma saída digital é usada para enviar sinais que ativam ou desativam componentes, como acender ou apagar um LED. Esse tipo de comunicação é essencial para controles simples e diretos dentro de um circuito.</h3><br>
+
+    <h2>O que são entradas e saídas analógicas em circuitos integrados como o Arduino:</h2><br>
+    <h3>As entradas analógicas permitem que o Arduino leia valores variáveis de tensão, normalmente entre 0 e 5 volts, transformando-os em números de 0 a 1023. Isso é útil para sensores que não possuem apenas dois estados, como sensores de temperatura ou luminosidade. Já as saídas analógicas, simuladas por meio de uma técnica chamada PWM (modulação por largura de pulso), permitem variar a intensidade de um sinal, como controlar o brilho de um LED ou a velocidade de um motor.</h3><br><br>
+
+    
+ 
+<section class="calculadora-area">
+
+ 
+
+    <div class="calculadoras-container">
+
+   
+        <div class="card">
+            <h2>Calculadora da Lei de Ohm</h2>
+            <label>Resistência (Ω):</label>
+            <input type="number" id="resistencia">
+            <label>Corrente (A):</label>
+            <input type="number" id="corrente">
+            <button onclick="calcularTensao()">Calcular Tensão (V)</button>
+        </div>
+
+        
+        <div class="card">
+            <h2>Calculadora de Potência Elétrica</h2>
+            <label>Tensão (V):</label>
+            <input type="number" id="tensaoPot">
+            <label>Corrente (A):</label>
+            <input type="number" id="correntePot">
+            <button onclick="calcularPot()">Calcular Potência (W)</button>
+        </div>
+
+        <div class="card">
+            <h2>Simulação de Leitura de Sensor</h2>
+            <label>Valor do Sensor:</label>
+            <input type="number" id="sensorVal">
+            <button onclick="simularSensor()">Simular</button>
+        </div>
+
+    </div>
+</section>
+    
+   <div class="faixa-final">
+  <footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <img src="./Pasta_Imagens/logo_sesisenai_final-removebg-preview.png" alt="SESI SENAI" class="footer-logo">
+            <p class="footer-author">Site realizado por <strong>Matheus Orsi Reis</strong></p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contato</h3>
+            <p><strong>Telefone:</strong> (48)  3263-8600</p>
+            <p><strong>E-mail:</strong> faleconosco@sesisc.org.br</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Localização</h3>
+            <p>SENAI Tijucas</p>
+            <p>Av. José Manoel Reis — Centro, Tijucas/SC</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 Todos os direitos reservados.
+    </div>
+</footer>
+
+</div>
+
+</body>
+</html>
