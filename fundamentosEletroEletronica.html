@@ -67,7 +67,8 @@
             <input type="number" id="resistencia">
             <label>Corrente (A):</label>
             <input type="number" id="corrente">
-            <button onclick="calcularTensao()">Calcular Tensão (V)</button>
+            <button onclick="calcularOhm()">Calcular Tensão (V)</button>
+            <div id="resultadoOhm"></div>
         </div>
 
         
@@ -78,13 +79,15 @@
             <label>Corrente (A):</label>
             <input type="number" id="correntePot">
             <button onclick="calcularPot()">Calcular Potência (W)</button>
+            <div id="resultadoPot"></div>
         </div>
 
         <div class="card">
             <h2>Simulação de Leitura de Sensor</h2>
             <label>Valor do Sensor:</label>
             <input type="number" id="sensorVal">
-            <button onclick="simularSensor()">Simular</button>
+            <button onclick="lerSensor()">Simular</button>
+            <div id="resultadoSensor"></div>
         </div>
 
     </div>

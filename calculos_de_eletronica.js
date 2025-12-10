@@ -29,7 +29,7 @@ function calcularPot() {
 }
 
 function lerSensor() {
-    let valor = parseInt(document.getElementById("valorSensor").value);
+    let valor = Number(document.getElementById("sensorVal").value);
     let resultado = "";
 
     if (isNaN(valor) || valor < 0 || valor > 1023) {
